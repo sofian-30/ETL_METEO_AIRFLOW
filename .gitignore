@@ -1,3 +1,11 @@
 venv/
 __pycache__/
 *.csv
+# Ignorer les fichiers de logs
+airflow/logs/
+airflow/standalone_admin_password.txt
+
+# Ignorer les fichiers temporaires
+*.log
+*.pid
+
