@@ -14,5 +14,17 @@ COPY . .
 # Installer les dépendances Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Commande par défaut pour Airflow
+# Initialiser la base de données Airflow
+RUN airflow db init
+
+# Commande pour créer un utilisateur administrateur dans Airflow
+RUN airflow users create \
+    --username admin \
+    --password admin \
+    --firstname Admin \
+    --lastname User \
+    --role Admin \
+    --email admin@example.com
+
+# Commande par défaut pour démarrer Airflow
 CMD ["airflow", "standalone"]

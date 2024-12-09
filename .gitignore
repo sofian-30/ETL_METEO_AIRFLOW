@@ -4,6 +4,7 @@ __pycache__/
 # Ignorer les fichiers de logs
 airflow/logs/
 airflow/standalone_admin_password.txt
+psql
 
 # Ignorer les fichiers temporaires
 *.log
